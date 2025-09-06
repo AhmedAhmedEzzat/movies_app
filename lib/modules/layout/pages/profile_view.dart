@@ -12,9 +12,6 @@ class ProfileView extends StatelessWidget {
         child: Column(
           children: const [
             ProfileTopSection(),
-
-
-
           ],
         ),
       ),
