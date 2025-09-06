@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:movies_app/core/constants/app_assets.dart';
-
 import '../theme/color_pallete.dart';
 
 class CustomTextFormField extends StatefulWidget {
