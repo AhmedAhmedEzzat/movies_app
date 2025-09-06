@@ -33,63 +33,66 @@ class _EditeProfileState extends State<EditeProfile> {
   Widget build(BuildContext context) {
     var theme = Theme.of(context);
     return Scaffold(
+      resizeToAvoidBottomInset: true,
       appBar: AppBar(title: const Text("Pick Avatar")),
-      body: Padding(
-        padding: const EdgeInsets.all(20),
-        child: Column(
-          children: [
-            AvatarWidget(
-              imagePath: selectedAvatar,
-              isSelected: false,
-              showBorder: false,
-              size: 120,
-              onTap: _showAvatarPicker,
-            ),
-            const SizedBox(height: 20),
+      body: SafeArea(
+        child: SingleChildScrollView(
+          padding: const EdgeInsets.all(20),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              AvatarWidget(
+                imagePath: selectedAvatar,
+                isSelected: false,
+                showBorder: false,
+                size: 120,
+                onTap: _showAvatarPicker,
+              ),
+              const SizedBox(height: 20),
 
-            CustomTextFormField(
-              hintText: 'Ahmed Ezzat',
-              prefixIcon: Image.asset(AppAssets.nameIcon),
-            ),
-            const SizedBox(height: 15),
+              CustomTextFormField(
+                hintText: 'Ahmed Ezzat',
+                prefixIcon: Image.asset(AppAssets.nameIcon),
+              ),
+              const SizedBox(height: 15),
 
-            CustomTextFormField(
-              hintText: '01067702463',
-              prefixIcon: Image.asset(AppAssets.phoneIcon),
-            ),
-            const SizedBox(height: 15),
+              CustomTextFormField(
+                hintText: '01067702463',
+                prefixIcon: Image.asset(AppAssets.phoneIcon),
+              ),
+              const SizedBox(height: 15),
 
-            Align(
-              alignment: Alignment.centerLeft,
-              child: Text("Reset Password", style: theme.textTheme.bodyMedium),
-            ),
+              Align(
+                alignment: Alignment.centerLeft,
+                child: Text("Reset Password", style: theme.textTheme.bodyMedium),
+              ),
+              const SizedBox(height: 40),
 
-            const Spacer(),
-
-            CustomButton(
-              borderColor: Colors.red,
-              backgroundColor: Colors.red,
-              onTap: () {},
-              child: Text(
-                'Delete Account',
-                style: theme.textTheme.bodyLarge?.copyWith(
-                  fontWeight: FontWeight.w400,
-                  color: ColorPallete.textWhiteColor,
+              CustomButton(
+                borderColor: Colors.red,
+                backgroundColor: Colors.red,
+                onTap: () {},
+                child: Text(
+                  'Delete Account',
+                  style: theme.textTheme.bodyLarge?.copyWith(
+                    fontWeight: FontWeight.w400,
+                    color: ColorPallete.textWhiteColor,
+                  ),
                 ),
               ),
-            ),
-            const SizedBox(height: 12),
-            CustomButton(
-              onTap: () {},
-              child: Text(
-                'Update Data',
-                style: theme.textTheme.bodyLarge?.copyWith(
-                  fontWeight: FontWeight.w400,
-                  color: ColorPallete.textBlackColor,
+              const SizedBox(height: 12),
+              CustomButton(
+                onTap: () {},
+                child: Text(
+                  'Update Data',
+                  style: theme.textTheme.bodyLarge?.copyWith(
+                    fontWeight: FontWeight.w400,
+                    color: ColorPallete.textBlackColor,
+                  ),
                 ),
               ),
-            ),
-          ],
+            ],
+          ),
         ),
       ),
     );
