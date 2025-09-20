@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:movies_app/modules/layout/layout.dart';
-import 'package:movies_app/modules/layout/pages/edite_profile.dart';
+import 'package:movies_app/modules/layout/pages/edite_profile/widgets/edite_profile.dart';
 import 'package:movies_app/modules/login/pages/forget_password.dart';
 import 'package:movies_app/modules/login/pages/login_view.dart';
 import 'package:movies_app/modules/login/pages/register_view.dart';
